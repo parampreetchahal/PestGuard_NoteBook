@@ -1,109 +1,259 @@
+# 🐛 PestGuard_NoteBook
 
-# 🐛 Insect Classification Using CNN (TensorFlow / Keras)
+A collection of Jupyter notebooks for pest detection and classification using Deep Learning and Computer Vision techniques.
 
-This project is a Convolutional Neural Network (CNN) model trained to classify 9 different types of crop pests. The model has been trained on a custom dataset and evaluated for real-world accuracy. It can be integrated into agriculture-based pest control solutions for early pest detection.
+This repository contains notebooks focused on:
 
----
-
-## 📁 Dataset
-
-The dataset consists of insect images organized into 9 classes:
-
-- aphids
-- armyworm
-- beetle
-- bollworm
-- grasshopper
-- mites
-- mosquito
-- sawfly
-- stem_borer
-
-Each class contains several `.jpg` images of the respective insect. The dataset is structured in standard subfolders under `train`, `validation`, and `test`.
-
-**Google Drive Dataset Link**: [📂 Click to Access Dataset]([https://your-link-here](https://drive.google.com/drive/folders/1gKSVo5Y2CsmeKtEz6Dgstn-Jn5FpZ5Py?usp=sharing))
+* Pest classification using Hybrid Deep Learning models
+* YOLOv8-based pest detection
+* Training and evaluation workflows
+* Image preprocessing and augmentation
+* Model performance analysis
 
 ---
 
-## 🧠 Model Details
+# 📂 Repository Overview
 
-- **Architecture**: Custom CNN using Keras Sequential API.
-- **Framework**: TensorFlow / Keras
-- **Image Size**: 128 x 128
-- **Batch Size**: 32
-- **Epochs**: 30
+This repository is dedicated only to the notebook implementation of the PestGuard project.
 
----
-```
-## 🏁 Training and Evaluation Results
+The notebooks included here demonstrate:
 
-### ✅ **Test Performance**
-
-Loss      : 0.1658
-Accuracy  : 94.26%
-
-````
-
-
-
-> The graph shows signs of **overfitting**, as validation accuracy drops after a few epochs. Regularization techniques may help generalize better.
+* Model training
+* Model evaluation
+* Transfer learning workflows
+* YOLO detection pipeline
+* Deep learning experimentation
 
 ---
 
-## 🔍 Confusion Matrix
+# 📁 Repository Structure
 
-
-| Class Name      | Precision/Observation |
-|-----------------|-----------------------|
-| aphids          | 100% (65/65)          |
-| armyworm        | 100% (67/67)          |
-| beetle          | 94.2% (66/70)         |
-| bollworm        | ~61% (38/62)          |
-| grasshopper     | 100% (54/54)          |
-| mites           | 96.3% (63/65)         |
-| mosquito        | ~91% (41/45)          |
-| sawfly          | ~93% (53/57)          |
-| stem_borer      | 100% (62/62)          |
-
----
-
-## 🧪 Prediction Example
-
-You can predict any insect image with:
-
-```python
-class_names = ['aphids', 'armyworm', 'beetle', 'bollworm', 'grasshopper', 'mites', 'mosquito', 'sawfly', 'stem_borer']
-preds = model.predict(x)
-predicted_class = class_names[np.argmax(preds)]
-````
-
----
-
-## 💾 Model Saving
-
-```python
-model.save('/desired/path/insect_model.h5')
+```bash
+PestGuard_NoteBook/
+│
+├── notebook_1.ipynb
+├── notebook_2.ipynb
+├── notebook_3.ipynb
+└── README.md
 ```
 
 ---
 
-## 🛠️ Future Improvements
+# 🧠 Deep Learning Concepts Used
 
-* Add **dropout**, **batch normalization**, or **data augmentation** to reduce overfitting.
-* Experiment with **transfer learning** (e.g., MobileNet, ResNet50).
-* Improve dataset diversity to help generalization.
-* Deploy using Flask or Streamlit.
+The notebooks implement several modern AI and Deep Learning techniques:
+
+* Transfer Learning
+* Convolutional Neural Networks (CNN)
+* EfficientNet Architecture
+* YOLOv8 Object Detection
+* Batch Normalization
+* Dropout Regularization
+* Data Augmentation
+* Image Classification
+* Computer Vision
 
 ---
 
-## 🙋‍♂️ Author
+# ⚙️ Technologies Used
 
-**Parampreet Singh**
+## Programming Language
+
+* Python
+
+## Frameworks & Libraries
+
+* TensorFlow
+* Keras
+* Ultralytics YOLOv8
+* NumPy
+* Pandas
+* OpenCV
+* Matplotlib
+* Seaborn
+* Scikit-learn
 
 ---
 
-## 📄 License
+# 📊 Features
 
-MIT License
+✅ Pest image classification
+✅ YOLOv8 object detection
+✅ Deep learning training notebooks
+✅ Model evaluation workflow
+✅ Transfer learning implementation
+✅ GPU training support
+✅ Visualization and analysis
 
+---
 
+# 📦 Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/your-username/PestGuard_NoteBook.git
+cd PestGuard_NoteBook
+```
+
+---
+
+# 🔧 Create Virtual Environment
+
+## Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+## Linux / Mac
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+---
+
+# 📥 Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# ▶️ Running the Notebooks
+
+Start Jupyter Notebook:
+
+```bash
+jupyter notebook
+```
+
+Then open any notebook file and run the cells step by step.
+
+---
+
+# 📈 Model Workflow
+
+The notebooks generally follow this workflow:
+
+```text
+Dataset Loading
+       ↓
+Image Preprocessing
+       ↓
+Data Augmentation
+       ↓
+Model Building
+       ↓
+Training
+       ↓
+Evaluation
+       ↓
+Prediction
+```
+
+---
+
+# 📉 Evaluation Metrics
+
+The notebooks include evaluation using:
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* Confusion Matrix
+* Loss Curves
+* Accuracy Curves
+
+---
+
+# 💻 Training Environment
+
+The notebooks were designed to run on:
+
+* Jupyter Notebook
+* Kaggle Notebook
+* Google Colab
+
+GPU acceleration is recommended for faster training.
+
+---
+
+# 🛠️ Example Requirements
+
+```txt
+tensorflow
+keras
+ultralytics
+opencv-python
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+jupyter
+```
+
+---
+
+# 🌾 Applications
+
+These notebooks can be used for:
+
+* Agricultural AI research
+* Pest classification systems
+* Smart farming projects
+* Computer vision learning
+* Deep learning experimentation
+* Academic projects
+
+---
+
+# 🤝 Contributions
+
+Contributions are welcome.
+
+If you would like to improve the notebooks:
+
+1. Fork the repository
+2. Create a new branch
+3. Make changes
+4. Commit updates
+5. Submit a pull request
+
+---
+
+# 📝 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+## Parampreet Singh
+
+B.Tech CSE Student
+Graphic Era Hill University, Dehradun
+Machine Learning & AI Enthusiast
+
+---
+
+# ⭐ Support
+
+If you found this repository useful:
+
+* Give it a star ⭐
+* Fork the repository
+* Share with others
+
+---
+
+# 🚀 Final Note
+
+PestGuard_NoteBook is a notebook-based deep learning repository focused on pest detection and classification experiments using modern AI techniques and computer vision workflows.
